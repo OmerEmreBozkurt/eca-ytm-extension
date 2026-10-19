@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ECA Bot ayarları</title>
+  <link rel="stylesheet" href="ui.css" />
+</head>
+<body class="page">
+  <main class="card">
+    <h1>ECA Bot — YouTube Music</h1>
+    <p class="muted">YouTube Music'teki "+" butonları şarkıları bu bota gönderir.</p>
+    <form id="form" class="stack">
+      <label>
+        Bot web paneli adresi
+        <input id="bot-url" type="url" placeholder="https://eca.ornek.com" required />
+      </label>
+      <label>
+        WEB_UI_TOKEN
+        <input id="token" type="password" placeholder="Coolify'daki WEB_UI_TOKEN" required />
+      </label>
+      <button type="submit" class="btn primary">Kaydet ve test et</button>
+    </form>
+    <p id="result" class="result" hidden></p>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

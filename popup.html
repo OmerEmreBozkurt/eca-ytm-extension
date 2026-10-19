@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <title>ECA Bot</title>
+  <link rel="stylesheet" href="ui.css" />
+</head>
+<body class="popup">
+  <header class="row">
+    <strong>ECA Bot</strong>
+    <a id="open-options" href="#" class="muted small">Ayarlar</a>
+  </header>
+  <p id="state" class="muted">Bağlanıyor…</p>
+  <section id="details" hidden>
+    <div class="now">
+      <div class="muted small">Şu an çalıyor</div>
+      <div id="now-title">—</div>
+    </div>
+    <label class="switch-row">
+      <span>
+        Autoplay
+        <span class="muted small">Kuyruk bitince benzer şarkılar</span>
+      </span>
+      <input id="autoplay" type="checkbox" />
+    </label>
+  </section>
+  <p class="muted small hint">YouTube Music'te şarkıların yanındaki <b>+</b> ile kuyruğa ekle.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

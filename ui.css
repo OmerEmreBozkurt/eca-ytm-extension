@@ -1,0 +1,165 @@
+/* Eklenti popup ve ayarlar sayfası — botun web paneliyle aynı renkler */
+:root {
+  --bg: #0d0d12;
+  --card: #1a1a24;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #9a9ab0;
+  --accent: #5865f2;
+  --green: #1db954;
+  --danger: #ed4245;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 12px;
+}
+
+.error {
+  color: #ff8b8e;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+a {
+  color: var(--muted);
+}
+
+input[type="url"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 9px 11px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.btn {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 8px;
+  font: 600 14px system-ui, sans-serif;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--accent);
+}
+
+/* Ayarlar sayfası */
+.page {
+  padding: 40px 16px;
+}
+
+.card {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.card h1 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.result {
+  margin: 16px 0 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.result.ok {
+  background: rgba(29, 185, 84, 0.15);
+  color: #6be39a;
+}
+
+.result.error {
+  background: rgba(237, 66, 69, 0.15);
+  color: #ff8b8e;
+}
+
+/* Popup */
+.popup {
+  width: 300px;
+  padding: 12px 14px;
+}
+
+.popup p {
+  margin: 8px 0;
+}
+
+.now {
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+#now-title {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.switch-row > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.switch-row input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.hint {
+  margin-top: 4px;
+}

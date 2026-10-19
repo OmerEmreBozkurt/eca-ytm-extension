@@ -1,0 +1,113 @@
+/* ECA Bot — YouTube Music'e eklenen butonlar ve bildirim */
+
+.eca-add {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.15s, opacity 0.15s, transform 0.1s;
+}
+
+.eca-add[hidden] {
+  display: none !important;
+}
+
+.eca-add:hover {
+  background: #5865f2;
+  border-color: #5865f2;
+}
+
+.eca-add:active {
+  transform: scale(0.94);
+}
+
+.eca-add[data-state="done"] {
+  background: #1db954;
+  border-color: #1db954;
+}
+
+.eca-add[data-state="error"] {
+  background: #ed4245;
+  border-color: #ed4245;
+}
+
+/* Şarkı satırları: menü (⋮) butonunun solunda */
+.eca-row {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+  font-size: 20px;
+  opacity: 0.55;
+}
+
+ytmusic-responsive-list-item-renderer:hover > .eca-row,
+.eca-row[data-state]:not([data-state=""]) {
+  opacity: 1;
+}
+
+/* Kartlar: kapak resminin sağ üst köşesi */
+ytmusic-two-row-item-renderer {
+  position: relative;
+}
+
+.eca-card {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+}
+
+ytmusic-two-row-item-renderer:hover > .eca-card,
+.eca-card[data-state]:not([data-state=""]) {
+  opacity: 1;
+}
+
+/* Albüm / playlist başlığı */
+.eca-header {
+  flex-shrink: 0;
+  white-space: nowrap;
+  height: 36px;
+  padding: 0 16px;
+  margin-left: 12px;
+  font-size: 14px;
+  align-self: center;
+}
+
+/* Bildirim: oynatıcı çubuğunun üstünde */
+#eca-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 96px;
+  z-index: 10000;
+  max-width: min(520px, calc(100vw - 32px));
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #1db954;
+  color: #fff;
+  font: 500 14px Roboto, Arial, sans-serif;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+#eca-toast.eca-error {
+  background: #ed4245;
+}
+
+#eca-toast.eca-show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
